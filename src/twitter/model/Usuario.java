@@ -1,15 +1,16 @@
 package twitter.model;
 
-import java.util.ArrayList;
 
 public class Usuario {
 
 	String nome, telefone, nickname, email, senha;
+	int id;
 
 	public Usuario() {
 	}
 	
-	public Usuario(String nome, String telefone, String nickname, String email, String senha) {
+	public Usuario(int id, String nome, String telefone, String nickname, String email, String senha) {
+		this.id = id;
 		this.nome = nome;
 		this.telefone = telefone;
 		this.nickname = nickname;
@@ -17,7 +18,15 @@ public class Usuario {
 		this.senha = senha;
 		
 	}
-
+	
+	public int getId() {
+		return id;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 	public String getNome() {
 		return nome;
 	}
