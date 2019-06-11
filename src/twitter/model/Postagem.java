@@ -6,14 +6,24 @@ public class Postagem {
 	String texto;
 	Date dataEhora;
 	String imagem;
+	Usuario usuario;
 	
 	public Postagem() {
 	}
 	
-	public Postagem(String texto, Date dataEhora, String imagem) {
+	public Postagem(String texto, Date dataEhora, String imagem, Usuario usuario) {
 		this.texto = texto;
 		this.dataEhora = dataEhora;
 		this.imagem = imagem;
+		this.usuario = usuario;
+	}
+	
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
 	public String getTexto() {
