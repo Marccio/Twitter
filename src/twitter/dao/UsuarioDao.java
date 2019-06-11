@@ -53,15 +53,14 @@ public class UsuarioDao {
 		return -1;
 	}
 
-	public Usuario consultar(String email) {
-		String sql = "SELECT id, nome, telefone, nickname, email FROM usuario WHERE email = ?";
+	public Usuario consultar(int id) {
+		String sql = "SELECT nome, telefone, nickname, email FROM usuario WHERE id = ?";
 
 		try (PreparedStatement ps = this.conexao.prepareStatement(sql);) {
-			ps.setString(1, email);
+			ps.setInt(1, id);
 			try (ResultSet rs = ps.executeQuery();) {
 				if (rs.next()) {
 					Usuario a = new Usuario();
-					a.setId(rs.getInt("id"));
 					a.setNome(rs.getString("nome"));
 					a.setTelefone(rs.getString("telefone"));
 					a.setNickname(rs.getString("nickname"));
@@ -109,13 +108,16 @@ public class UsuarioDao {
 		}
 	}
 
-	public ArrayList<Usuario> listarUsuario() {
-		String sqlSelect = "SELECT nickname FROM usuario";
+	public ArrayList<Usuario> listarMeusSeguidores(String nickname) {
+		String sqlSelect = "SELECT nickname FROM segue WHERE seguido = ?";
 
 		ArrayList<Usuario> lista = new ArrayList<>();
 		try {
 			this.conexao = ConnectionFactory.conectar();
 			PreparedStatement stm = conexao.prepareStatement(sqlSelect);
+			stm.setString(1, nickname);
+			stm.execute();
+			
 			ResultSet rs = stm.executeQuery();
 
 			while (rs.next()) {
@@ -129,4 +131,28 @@ public class UsuarioDao {
 		}
 		return null;
 	}
+	
+	public ArrayList<Usuario> listarQuemSigo(String nickname) {
+		String sqlSelect = "SELECT nickname FROM segue WHERE segue = ?";
+
+		ArrayList<Usuario> lista = new ArrayList<>();
+		try {
+			this.conexao = ConnectionFactory.conectar();
+			PreparedStatement stm = conexao.prepareStatement(sqlSelect);
+			stm.setString(1, nickname);
+			stm.execute();
+			
+			ResultSet rs = stm.executeQuery();
+
+			while (rs.next()) {
+				Usuario a = new Usuario();
+				a.setNickname(rs.getString(1));
+				lista.add(a);
+			}
+			return lista;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}	
 }
