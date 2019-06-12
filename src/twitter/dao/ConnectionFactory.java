@@ -16,6 +16,6 @@ public class ConnectionFactory {
 
 	public static Connection conectar() throws SQLException {
 
-		return DriverManager.getConnection("jdbc:mysql://localhost/twitter?useSSL=false&useTimezone=true&serverTimezone=UTC", "root", "Marcinho@1998");
+		return DriverManager.getConnection("jdbc:mysql://localhost/twitter?useSSL=false&useTimezone=true&serverTimezone=UTC", "root", "root"	);
 	}
 }
