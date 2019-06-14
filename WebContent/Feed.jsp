@@ -18,18 +18,19 @@
 	<%
 		PostagemService pService = new PostagemService();
 		ArrayList<Integer> lista = pService.listarIds();
-		for(int i=1; i<31;i++){
+		for(int i=1; i<lista.size();i++){
 	%>
-<div class="span8">
-	<% int id = (int) lista.get(i);
+<div>
+	<%
+	int id = (int) lista.get(i);
 	Postagem postagem = pService.consultar(id);
 	%>
 	
     <p><%=postagem.getTexto() %></p>
     <div>
-        <span class="badge badge-success">data e hora</span><div class="pull-right"><span class="label"><%=postagem.getUsuario() %></span></div>
+        <span class="badge badge-success"><%=postagem.getDataEhora() %></span><div class="pull-right"><span class="label"><%=postagem.getUsuario() %></span></div>
     </div> 
-    <hr>
+    <br>
     <%} %>
 </div>
 </body>
