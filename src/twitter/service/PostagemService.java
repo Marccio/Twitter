@@ -29,4 +29,7 @@ public class PostagemService {
 		return this.postagemDao.listarPostagemSeguindo(nickname);
 	}
 	
+	public ArrayList<Integer> listarIds(){
+		return this.postagemDao.listarIds();
+	}
 }

@@ -122,4 +122,25 @@ public class PostagemDao {
 		return null;
 	}
 	
+	public ArrayList<Integer> listarIds() {
+		try {
+			this.conexao = ConnectionFactory.conectar();
+			
+			String sql = "SELECT id FROM postagem ORDER BY id DESC";
+			PreparedStatement ps = this.conexao.prepareStatement(sql);
+			
+			ResultSet rs = ps.executeQuery();
+			ArrayList<Integer> lista = new ArrayList<Integer>();
+			while(rs.next()) {
+				lista.add(rs.getInt("id"));
+			}
+			
+			return lista;
+			
+		} catch (SQLException ex) {
+			ex.printStackTrace();
+		}
+		return null;
+	}
+	
 }

@@ -8,7 +8,7 @@ public class ConnectionFactory {
 
 	static {
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 		} catch (ClassNotFoundException ex) {
 			ex.printStackTrace();
 		}
@@ -16,6 +16,6 @@ public class ConnectionFactory {
 
 	public static Connection conectar() throws SQLException {
 
-		return DriverManager.getConnection("jdbc:mysql://localhost/twitter?useSSL=false&useTimezone=true&serverTimezone=UTC", "root", "root"	);
+		return DriverManager.getConnection("jdbc:mysql:8080//localhost/bancotwitter", "root", "root");
 	}
-}
+}//?useSSL=false&useTimezone=true&serverTimezone=UTC
