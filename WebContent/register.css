@@ -14,9 +14,9 @@ body {
 	margin: 0 auto;
 	border-radius: 0.3em;
 	background-color: #FFFFFF;
-	
+	margin-top:30px;
 	margin-left:20px;
-	maegin-rigth:20px;
+	maegin-rigth:50px;
 }
 
 *[role="form"] h3 {
@@ -27,7 +27,7 @@ body {
 }
 
 .register-container {
-	margin-top: 20%;
+	margin-top: 5%;
 	margin-bottom: 10%;
 	 position : absolute;
 	top: 10%;
@@ -35,8 +35,20 @@ body {
 	transform: translate(-50%, -50%);
 	position: absolute; top : 20%; left : 50%; transform : translate( -50%,
 	-50%);
-	width: 1000px;
+	width: 700px;
+	margin-right:10px;
 }
-.register-container form-control{
-	max-width: 10px;
+.btnSubmit {
+	width: 100px;
+	height: 45px;
+	border-radius: 2rem;
+	padding: 1.5%;
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+	color: #fff;
+	background-color: #1DA1F2;
+	margin-top: 10px;
+	margin-left: 10%;
+	margin-bottom: 10px;
 }
