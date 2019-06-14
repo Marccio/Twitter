@@ -26,7 +26,7 @@
 	
     <p><%=postagem.getTexto() %></p>
     <div>
-        <span class="badge badge-success"></span><div class="pull-right"><span class="label"><%=postagem.getUsuario() %></span></div>
+        <span class="badge badge-success">data e hora</span><div class="pull-right"><span class="label"><%=postagem.getUsuario() %></span></div>
     </div> 
     <hr>
     
