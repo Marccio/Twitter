@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `bancoTwitter`.`usuario` (
 ENGINE = InnoDB;
 
 INSERT INTO usuario (nome, telefone, nickname, email, senha) VALUES ('Vitoria', '998766636', '@vickpaula', 'vitoriapaulafofa@ig.com', 'vitoria123');
-INSERT INTO usuario (nome, telefone, nickname, email, senha) VALUES ('Marcio', '996973146', '@marcinho', 'marcioamorosino@gmail.com', 'marcio123');
+INSERT INTO usuario (nome, telefone, nickname, email, senha) VALUES ('Marcio', '996973146', '@marcio', 'marcioamorosino@gmail.com', 'marcio123');
 INSERT INTO usuario (nome, telefone, nickname, email, senha) VALUES ('Gustavo', '979237694', '@guFiacador', 'gustavodantas@hotmail.com', 'gustavo123');
 
 -- -----------------------------------------------------
@@ -57,6 +57,37 @@ ENGINE = InnoDB;
 
 INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('Bom dia twitter!', '2019-05-29 23:59:59', '@vickpaula');
 INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('Boa noite galera!', '2019-04-16 23:59:59', '@guFiacador');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('teste', '2019-04-16 23:59:59', '@marcio');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@guFiacador');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@vickpaula');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@marcio');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@guFiacador');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@vickpaula');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@marcio');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@guFiacador');
+-- 10 --
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@guFiacador');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@marcio');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@guFiacador');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@marcio');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@vickpaula');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@guFiacador');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@marcio');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@vickpaula');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@guFiacador');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@marcio');
+-- 20 --
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@guFiacador');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@marcio');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@guFiacador');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@vickpaula');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@vickpaula');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@marcio');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@marcio');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@marcio');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@guFiacador');
+INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo', '2019-04-16 23:59:59', '@marcio');
+-- 30 --
 
 
 -- -----------------------------------------------------

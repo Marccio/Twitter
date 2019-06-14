@@ -18,9 +18,10 @@
 	<%
 		PostagemService pService = new PostagemService();
 		ArrayList<Integer> lista = pService.listarIds();
+		for(int i=1; i<31;i++){
 	%>
 <div class="span8">
-	<% int id = (int) lista.get(1);
+	<% int id = (int) lista.get(i);
 	Postagem postagem = pService.consultar(id);
 	%>
 	
@@ -29,8 +30,7 @@
         <span class="badge badge-success">data e hora</span><div class="pull-right"><span class="label"><%=postagem.getUsuario() %></span></div>
     </div> 
     <hr>
-    
+    <%} %>
 </div>
 </body>
 </html>
-
