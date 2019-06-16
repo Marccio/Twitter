@@ -55,16 +55,19 @@ public class PostagemDao {
 	}
 
 	public Postagem consultar(int id) {
-		String sql = "SELECT texto, dataEhora, imagem FROM postagem WHERE id = ?";
+		String sql = "SELECT texto, dataEhora, imagem, usuario_nickname FROM postagem WHERE id = ?";
 
 		try (PreparedStatement ps = this.conexao.prepareStatement(sql);) {
 			ps.setInt(1, id);
 			try (ResultSet rs = ps.executeQuery();) {
 				if (rs.next()) {
+					Usuario u = new Usuario();
 					Postagem a = new Postagem();
 					a.setTexto(rs.getString("texto"));
 					a.setDataEhora(rs.getDate("dataEhora"));
 					a.setImagem(rs.getString("imagem"));
+					u.setNickname(rs.getString("usuario_nickname"));
+					a.setUsuario(u);
 
 					return a;
 				} else {
