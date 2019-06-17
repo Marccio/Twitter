@@ -46,6 +46,8 @@
 					<li class="nav-item active"><a class="nav-link" href="#"
 						data-toggle="modal" data-target="#modalSeguidores">Seguidores
 					</a></li>
+					<li class="nav-item active"><a class="nav-link" href="#"
+						data-toggle="modal" data-target="#modalPostagem">Criar Post </a></li>
 					<li class="nav-item active"><a class="nav-link"
 						href="logout.do">Sair</a></li>
 
@@ -77,29 +79,63 @@
 											</tr>
 										</thead>
 										<tbody>
-											<%	
-						try {
-						UsuarioService userService = new UsuarioService();
-						
-						ArrayList<Usuario> listaUsuario = userService.listarMeusSeguidores(user.getNickname());
-	
-						for (Usuario usuario : listaUsuario) {
-					%>
+											<%
+												try {
+													UsuarioService userService = new UsuarioService();
+
+													ArrayList<Usuario> listaUsuario = userService.listarMeusSeguidores(user.getNickname());
+
+													for (Usuario usuario : listaUsuario) {
+											%>
 
 											<tr>
 												<th scope="row"><%=usuario.getId()%></th>
 												<td><%=usuario.getNickname()%></td>
 
 											</tr>
-						<% } 
-						} catch(Exception e){
-							
-						}%>
+											<%
+												}
+												} catch (Exception e) {
+
+												}
+											%>
 										</tbody>
-					
+
 									</table>
 
 								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modalPostagem">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="logo mb-3">Novo Post</h1>
+					<button type="button" class="close" data-dismiss="modal">
+						<span> &times; </span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="container-center">
+						<div class="row">
+							<div class="center" id="first">
+								<form method="POST" action="CadastrarPostagem.do">
+								<div class="form-group">
+									<label for="txtNome">Texto</label> 
+									<input type="text"
+										class="form-control" id="txtNome" name="post"
+										aria-describedby="nomeHelp" placeholder="Digite seu Post"
+										required="" autofocus="">
+								</div>
+								 <button type="submit" class="btn btn-lg mt-2 btn-primary btnCadastrar">Cadastrar</button>
+								</form>
 							</div>
 
 						</div>
