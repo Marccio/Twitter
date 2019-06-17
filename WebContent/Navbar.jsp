@@ -21,30 +21,32 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<%
-				Usuario usuario = (Usuario) session.getAttribute("usuario");
-				if (usuario == null) {
+				/*Usuario usuario = (Usuario) session.getAttribute("usuario");
+				if (usuario == null) {*/
 			%>
-
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="nav navbar-nav ml-auto">
-					<li class="nav-item active"><a class="nav-link" href="login.html">Login</a></li>
-					<li class="nav-item active"><a class="nav-link" href="register.html">Cadastre-se</a></li>
-				</ul>
-			</div>
 
 			<%
-				} else {
+				//} else {
 			%>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="nav navbar-nav ml-auto">
-					<li class="nav-item active"><a class="nav-link">Logado como ${usuario.nome}</a></li>
+					<li class="nav-item active" Style="text-aliggn:left;"><a class="nav-link">Logado como ${usuario.nome}     </a></li>
+					<form class="form-inline">
+				    <div class="input-group">
+				      <div class="input-group-prepend">
+				        <span class="input-group-text" id="basic-addon1">@</span>
+				      </div>
+				      <input type="text" class="form-control" placeholder="Usuário" aria-label="Usuário" aria-describedby="basic-addon1">
+				     <button type="button" class="btn btn-outline-primary">Seguir</button>
+				    </div>
+				  </form>
 					<li class="nav-item active"><a class="nav-link" href="logout.do">Sair</a></li>
 
 				</ul>
 			</div>
 
 			<%
-				}
+				//}
 			%>
 		</div>
 	</nav>

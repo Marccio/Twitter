@@ -17,7 +17,7 @@ import twitter.util.Criptografia;
 /**
  * Servlet implementation class UsuarioLogin
  */
-@WebServlet("/UsuarioLogin.do")
+@WebServlet("/Login.do")
 public class UsuarioLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
