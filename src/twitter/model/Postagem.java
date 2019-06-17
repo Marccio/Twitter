@@ -3,6 +3,7 @@ package twitter.model;
 import java.util.Date;
 
 public class Postagem {
+	int id;
 	String texto;
 	Date dataEhora;
 	String imagem;
@@ -11,11 +12,20 @@ public class Postagem {
 	public Postagem() {
 	}
 	
-	public Postagem(String texto, Date dataEhora, String imagem, Usuario usuario) {
+	public Postagem(int id, String texto, Date dataEhora, String imagem, Usuario usuario) {
+		this.id = id;
 		this.texto = texto;
 		this.dataEhora = dataEhora;
 		this.imagem = imagem;
 		this.usuario = usuario;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 	public Usuario getUsuario() {
