@@ -53,11 +53,11 @@ public class UsuarioDao {
 		return -1;
 	}
 
-	public Usuario consultar(int id) {
-		String sql = "SELECT nome, telefone, nickname, email FROM usuario WHERE id = ?";
+	public Usuario consultar(String id) {
+		String sql = "SELECT nome, telefone, nickname, email FROM usuario WHERE nickname = ?";
 
 		try (PreparedStatement ps = this.conexao.prepareStatement(sql);) {
-			ps.setInt(1, id);
+			ps.setString(1, id);
 			try (ResultSet rs = ps.executeQuery();) {
 				if (rs.next()) {
 					Usuario a = new Usuario();

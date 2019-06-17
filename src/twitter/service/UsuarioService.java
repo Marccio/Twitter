@@ -17,7 +17,7 @@ public class UsuarioService {
 		return this.usuarioDao.cadastrar(usuario);
 	}
 	
-	public Usuario consultar(int id) {
+	public Usuario consultar(String id) {
 		return this.usuarioDao.consultar(id);
 	}
 	
