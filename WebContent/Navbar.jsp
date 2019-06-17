@@ -36,8 +36,8 @@
 			</button>
 			<%
 				Usuario user = (Usuario) session.getAttribute("usuario");
-				//System.out.print(usuario.getEmail());
-				if (user == null) {
+				//System.out.print(user.getEmail());
+				if (user != null) {
 			%>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="nav navbar-nav ml-auto">
