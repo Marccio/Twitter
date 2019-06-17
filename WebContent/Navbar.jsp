@@ -13,7 +13,7 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-expand-md navbar-dark sticky-top" id="navBar">
+	<nav class="navbar navbar-expand-md navbar-dark sticky-top" id="navBar" style="background-color: #1DA1F2;">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="index.jsp"><h1>Twistter</h1></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
