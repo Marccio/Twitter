@@ -21,6 +21,10 @@ public class UsuarioService {
 		return this.usuarioDao.consultar(id);
 	}
 	
+	public Usuario consultarLogin(String email) {
+		return this.usuarioDao.consultarLogin(email);
+	}
+	
 	public void excluir(String email) {
 		this.usuarioDao.excluir(email);
 	}
