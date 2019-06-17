@@ -115,12 +115,12 @@ public class UsuarioDao {
 			try (ResultSet rs = ps.executeQuery();) {
 				if (rs.next()) {
 					Usuario a = new Usuario();
-					a.setId(rs.getInt("id"));
-					a.setNome(rs.getString("nome"));
-					a.setTelefone(rs.getString("telefone"));
-					a.setNickname(rs.getString("nickname"));
-					a.setSenha(rs.getString("senha"));
-					a.setEmail(rs.getString("email"));
+					a.setId(rs.getInt(1));
+					a.setNome(rs.getString(2));
+					a.setTelefone(rs.getString(3));
+					a.setNickname(rs.getString(4));
+					a.setEmail(rs.getString(5));
+					a.setSenha(rs.getString(6));
 
 					return a;
 				} else {

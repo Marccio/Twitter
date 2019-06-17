@@ -37,7 +37,7 @@
 			<%
 				Usuario user = (Usuario) session.getAttribute("usuario");
 				//System.out.print(usuario.getEmail());
-				if (user == null) {
+				if (user != null) {
 			%>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="nav navbar-nav ml-auto">
