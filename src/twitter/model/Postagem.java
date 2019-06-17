@@ -5,14 +5,14 @@ import java.util.Date;
 public class Postagem {
 	int id;
 	String texto;
-	Date dataEhora;
+	String dataEhora;
 	String imagem;
 	Usuario usuario;
 	
 	public Postagem() {
 	}
 	
-	public Postagem(int id, String texto, Date dataEhora, String imagem, Usuario usuario) {
+	public Postagem(int id, String texto, String dataEhora, String imagem, Usuario usuario) {
 		this.id = id;
 		this.texto = texto;
 		this.dataEhora = dataEhora;
@@ -44,11 +44,11 @@ public class Postagem {
 		this.texto = texto;
 	}
 
-	public Date getDataEhora() {
+	public String getDataEhora() {
 		return dataEhora;
 	}
 
-	public void setDataEhora(Date dataEhora) {
+	public void setDataEhora(String dataEhora) {
 		this.dataEhora = dataEhora;
 	}
 

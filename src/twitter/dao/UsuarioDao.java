@@ -53,7 +53,34 @@ public class UsuarioDao {
 		return -1;
 	}
 
-	public Usuario consultar(int id) {
+	public Usuario consultar(String id) {
+		String sql = "SELECT nome, telefone, nickname, email FROM usuario WHERE nickname = ?";
+
+		try (PreparedStatement ps = this.conexao.prepareStatement(sql);) {
+			ps.setString(1, id);
+			try (ResultSet rs = ps.executeQuery();) {
+				if (rs.next()) {
+					Usuario a = new Usuario();
+					a.setNome(rs.getString("nome"));
+					a.setTelefone(rs.getString("telefone"));
+					a.setNickname(rs.getString("nickname"));
+					a.setEmail(rs.getString("email"));
+
+					return a;
+				} else {
+					return null;
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+
+		return null;
+	}
+	
+	public Usuario consultar2(int id) {
 		String sql = "SELECT nome, telefone, nickname, email FROM usuario WHERE id = ?";
 
 		try (PreparedStatement ps = this.conexao.prepareStatement(sql);) {
