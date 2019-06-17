@@ -47,7 +47,7 @@
 						data-toggle="modal" data-target="#modalSeguidores">Seguidores
 					</a></li>
 					<li class="nav-item active"><a class="nav-link"
-						href="logout.do">Sair</a></li>
+						href="login.jsp">Sair</a></li>
 
 				</ul>
 			</div>
