@@ -79,6 +79,34 @@ public class UsuarioDao {
 
 		return null;
 	}
+	
+	public Usuario consultarLogin(String id) {
+		String sql = "SELECT * FROM usuario WHERE email = ?";
+
+		try (PreparedStatement ps = this.conexao.prepareStatement(sql);) {
+			ps.setString(1, id);
+			try (ResultSet rs = ps.executeQuery();) {
+				if (rs.next()) {
+					Usuario a = new Usuario();
+					a.setId(rs.getInt("id"));
+					a.setNome(rs.getString("nome"));
+					a.setTelefone(rs.getString("telefone"));
+					a.setNickname(rs.getString("nickname"));
+					a.setEmail(rs.getString("email"));
+
+					return a;
+				} else {
+					return null;
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+
+		return null;
+	}
 
 	public void excluir(String email) {
 		try {
@@ -154,5 +182,9 @@ public class UsuarioDao {
 			e.printStackTrace();
 		}
 		return null;
-	}	
+	}
+	
+	
+	
+	
 }
