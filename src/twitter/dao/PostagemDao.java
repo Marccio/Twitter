@@ -95,11 +95,11 @@ public class PostagemDao {
 		}
 	}
 
-	public ArrayList<Postagem> listarPostagemSeguindo(String nickname) {
-		String sqlSelect = "SELECT p.texto, p.dataEhora, p.imagem, s.segue FROM postagem AS p JOIN segue AS s \r\n" + 
+	public ArrayList<Integer> listarPostagemSeguindo(String nickname) {
+		String sqlSelect = "SELECT id FROM postagem AS p JOIN segue AS s \r\n" + 
 				"WHERE p.usuario_nickname = s.segue AND s.seguido = ?";
 
-		ArrayList<Postagem> lista = new ArrayList<>();
+		ArrayList<Integer> lista = new ArrayList<>();
 		try {
 			this.conexao = ConnectionFactory.conectar();
 			PreparedStatement stm = conexao.prepareStatement(sqlSelect);
@@ -109,14 +109,7 @@ public class PostagemDao {
 			ResultSet rs = stm.executeQuery();
 
 			while (rs.next()) {
-				Postagem a = new Postagem();
-				Usuario u = new Usuario();
-				a.setTexto(rs.getString(1));
-				a.setDataEhora(rs.getDate(2));
-				a.setImagem(rs.getString(3));
-				u.setNickname(rs.getString(4));
-				a.setUsuario(u);
-				lista.add(a);
+				lista.add(rs.getInt("id"));
 			}
 			return lista;
 		} catch (SQLException e) {

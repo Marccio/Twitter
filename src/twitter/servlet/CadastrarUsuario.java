@@ -46,22 +46,21 @@ public class CadastrarUsuario extends HttpServlet {
 		
 		Usuario user = new Usuario();
 		UsuarioService userService = new UsuarioService();
-		Criptografia cripto = new Criptografia();
 		
 		try {
 			user.setNome(nome);
 			user.setNickname(nickname);
 			user.setTelefone(telefone);
 			user.setEmail(email);
-			user.setSenha(cripto.convertToMD5(senha));
+			user.setSenha(senha);
 			
 			int idAuto = userService.cadastrar(user);
 			Usuario userTeste = userService.consultar(idAuto);
 			
 			if(idAuto == userTeste.getId()) {
-				response.sendRedirect("cadastro.jsp?cadastro=true");
+				response.sendRedirect("login.jsp?cadastro=true");
 			} else {
-				response.sendRedirect("cadastro.jsp?cadastro=false");
+				response.sendRedirect("login.jsp?cadastro=true");
 			}
 			
 		}catch (Exception e) {

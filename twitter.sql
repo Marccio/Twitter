@@ -33,9 +33,9 @@ CREATE TABLE IF NOT EXISTS `bancoTwitter`.`usuario` (
   UNIQUE INDEX `email_UNIQUE` (`email` ASC))
 ENGINE = InnoDB;
 
-INSERT INTO usuario (nome, telefone, nickname, email, senha) VALUES ('Vitoria', '998766636', '@vickpaula', 'vitoriapaulafofa@ig.com', 'f5a9b85168ca26dfd25ad58175051e76'); -- vitoria123 --
-INSERT INTO usuario (nome, telefone, nickname, email, senha) VALUES ('Marcio', '996973146', '@marcio', 'marcioamorosino@gmail.com', '224a954434c46a7734b0007d8b4363eb'); -- marcio123 --
-INSERT INTO usuario (nome, telefone, nickname, email, senha) VALUES ('Gustavo', '979237694', '@guFiacador', 'gustavodantas@hotmail.com', ''); -- gustavo123 --
+INSERT INTO usuario (nome, telefone, nickname, email, senha) VALUES ('Vitoria', '998766636', '@vickpaula', 'vitoriapaulafofa@ig.com', 'vitoria123'); -- vitoria123 --
+INSERT INTO usuario (nome, telefone, nickname, email, senha) VALUES ('Marcio', '996973146', '@marcio', 'marcioamorosino@gmail.com', 'marcio123'); -- marcio123 --
+INSERT INTO usuario (nome, telefone, nickname, email, senha) VALUES ('Gustavo', '979237694', '@guFiacador', 'gustavodantas@hotmail.com', 'gustavo123'); -- gustavo123 --
 
 -- -----------------------------------------------------
 -- Table `bancoTwitter`.`postagem`

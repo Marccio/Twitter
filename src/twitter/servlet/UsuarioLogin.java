@@ -45,31 +45,33 @@ public class UsuarioLogin extends HttpServlet {
 		String senha = request.getParameter("senha");
 		
 
-		Usuario user = new Usuario();
+		//Usuario user = new Usuario();
 		UsuarioService userService = new UsuarioService();
-		Criptografia cripto = new Criptografia();
 
-		user.setEmail(email);
+		//user.setEmail(email);
 		Usuario userAutentica = userService.consultarLogin(email);
-
+		
+		String login = request.getParameter("login");
+		System.out.println(login);
+		
 		if (request.getParameter("login") != null) {
-			String login = request.getParameter("login");
-			String teste = null;
+			
 			if (userAutentica != null) {
-				boolean senhaCorreta = cripto.matching(userAutentica.getSenha(), senha);
-				if (email.equals(userAutentica.getEmail()) && senhaCorreta == true) {					
+				if (email.equals(userAutentica.getEmail()) && senha.equals(userAutentica.getSenha())) {					
 					HttpSession session = request.getSession();
-					session.setAttribute("user", userAutentica);
-					response.sendRedirect("Feed.jsp?login=1");
+					session.setAttribute("usuario", userAutentica);
+					response.sendRedirect("Feed.jsp?nickname="+userAutentica.getNickname());
 				} else {
 					response.sendRedirect("login.html?senha=false");
+					System.out.println(login);
 				} 
-			} else {
+			} /*else {
 			response.sendRedirect("login.html?login=null");
-			}
+			System.out.println(login);
+			}*/
 		} else {
 			 //response.sendRedirect("login.html");
-			System.out.println("nop");
+			System.out.println(login);
 		}
 	}
 }

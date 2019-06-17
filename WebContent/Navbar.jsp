@@ -15,23 +15,15 @@
 <body>
 	<nav class="navbar navbar-expand-md navbar-dark sticky-top" id="navBar" style="background-color: #1DA1F2;">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="index.jsp"><h1>Twistter</h1></a>
+			<a class="navbar-brand" href="Feed.jsp"><h1>Twistter</h1></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarResponsive">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<%
-				Usuario usuario = (Usuario) session.getAttribute("usuario");
-				if (usuario == null) {
-			%>
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="nav navbar-nav ml-auto">
-					<li class="nav-item active"><a class="nav-link" href="login.html">Login</a></li>
-					<li class="nav-item active"><a class="nav-link" href="register.html">Cadastre-se</a></li>
-				</ul>
-</div>
-			<%
-				} else {
+			Usuario usuario = (Usuario) session.getAttribute("usuario");
+			//System.out.print(usuario.getEmail());
+			if (usuario != null) {
 			%>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="nav navbar-nav ml-auto">
@@ -51,9 +43,8 @@
 
 				</ul>
 			</div>
-
 			<%
-				}
+				} 
 			%>
 		</div>
 	</nav>

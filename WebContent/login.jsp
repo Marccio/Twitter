@@ -1,3 +1,4 @@
+<%@ include file="Navbar.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +26,7 @@
 		<div class="row">
 			<div class="col-md-8 login-form">
 				<h3>Entrar no Twistter</h3>
-				<form action="Login.do" method="POST">
+				<form action="Login.do?login=1" method="POST">
 					<div class="form-group">
 						<input type="text" class="form-control"
 							placeholder="Email" name="email" />
@@ -39,7 +40,7 @@
 					</div>
 					<div class="form-group">
 							<a>Novo no Twistter?</a>
-                            <a href="register" class="semconta">Inscreva-se agora »</a>
+                            <a href="register.jsp" class="semconta">Inscreva-se agora »</a>
                         </div>
 				</form>
 			</div>

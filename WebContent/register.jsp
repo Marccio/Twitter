@@ -1,3 +1,4 @@
+<%@ include file="Navbar.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,24 +27,24 @@
 </head>
 <body>
 <div class="container register-container">
-            <form class="form-horizontal" role="form">
+            <form class="form-horizontal" role="form" action="CadastrarUsuario.do" method="POST" >
                 <h3>Cadastro</h3>
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Nome</label>
                     <div class="col-sm-9">
-                        <input type="text" id="nome" placeholder="Nome completo" class="form-control" autofocus>
+                        <input type="text" id="nome" placeholder="Nome completo" class="form-control" autofocus name="nome">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Telefone </label>
                     <div class="col-sm-9">
-                        <input type="text" id="telefone" placeholder="Telefone" class="form-control">
+                        <input type="text" id="telefone" placeholder="Telefone" class="form-control" name="telefone">
                     </div>
                 </div>
                 <div class="form-group">
                     <label  class="col-sm-3 control-label">NickName</label>
                     <div class="col-sm-9">
-                        <input type="text" id="nickname" placeholder="NickName" class="form-control" autofocus>
+                        <input type="text" id="nickname" placeholder="NickName" class="form-control" autofocus name="nickname">
                     </div>
                 </div>
 
@@ -56,13 +57,13 @@
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Senha</label>
                     <div class="col-sm-9">
-                        <input type="password" id="senha" placeholder="Senha" class="form-control">
+                        <input type="password" id="senha" placeholder="Senha" class="form-control" name="senha">
                     </div>
 				</div>
                 <button type="submit" class="btnSubmit">Cadastro</button>
                 <div class="form-group">
 							<a>Já tem uma conta no Twistter?</a>
-                            <a href="#" class="entrar">Acesse agora »</a>
+                            <a href="login.jsp" class="entrar">Acesse agora »</a>
                         </div>
             </form> <!-- /form -->
         </div> <!-- ./container -->

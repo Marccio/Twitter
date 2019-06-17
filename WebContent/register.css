@@ -11,12 +11,12 @@ body {
 		rgba(0, 0, 0, 0.19);
 	text-align: center;
 	padding: 15px;
-	margin: 0 auto;
+	margin: auto;
 	border-radius: 0.3em;
 	background-color: #FFFFFF;
 	margin-top:30px;
 	margin-left:20px;
-	maegin-rigth:50px;
+	margin-rigth:50px;
 }
 
 *[role="form"] h3 {
@@ -33,9 +33,9 @@ body {
 	top: 10%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	position: absolute; top : 20%; left : 50%; transform : translate( -50%,
-	-50%);
+	position: absolute;
 	width: 700px;
+	height: 200px;
 	margin-right:10px;
 }
 .btnSubmit {

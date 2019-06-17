@@ -25,7 +25,7 @@ public class PostagemService {
 		this.postagemDao.excluir(id);
 	}
 	
-	public ArrayList<Postagem> listarPostagemSeguindo(String nickname){
+	public ArrayList<Integer> listarPostagemSeguindo(String nickname){
 		return this.postagemDao.listarPostagemSeguindo(nickname);
 	}
 	

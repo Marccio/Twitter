@@ -92,6 +92,7 @@ public class UsuarioDao {
 					a.setNome(rs.getString("nome"));
 					a.setTelefone(rs.getString("telefone"));
 					a.setNickname(rs.getString("nickname"));
+					a.setSenha(rs.getString("senha"));
 					a.setEmail(rs.getString("email"));
 
 					return a;
