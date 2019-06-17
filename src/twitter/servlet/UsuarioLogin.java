@@ -17,7 +17,7 @@ import twitter.util.Criptografia;
 /**
  * Servlet implementation class UsuarioLogin
  */
-@WebServlet("/UsuarioLogin.do")
+@WebServlet("/Login.do")
 public class UsuarioLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -43,7 +43,7 @@ public class UsuarioLogin extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String email = request.getParameter("email");
 		String senha = request.getParameter("senha");
-		System.out.println(email);
+		
 
 		Usuario user = new Usuario();
 		UsuarioService userService = new UsuarioService();
@@ -57,18 +57,19 @@ public class UsuarioLogin extends HttpServlet {
 			String teste = null;
 			if (userAutentica != null) {
 				boolean senhaCorreta = cripto.matching(userAutentica.getSenha(), senha);
-				if (email.equals(userAutentica.getEmail()) && senhaCorreta == true) {
+				if (email.equals(userAutentica.getEmail()) && senhaCorreta == true) {					
 					HttpSession session = request.getSession();
 					session.setAttribute("user", userAutentica);
-					response.sendRedirect("index.jsp");
+					response.sendRedirect("Feed.jsp?login=1");
 				} else {
-					response.sendRedirect("pagLogin.html?senha=false");
+					response.sendRedirect("login.html?senha=false");
 				} 
 			} else {
-			response.sendRedirect("pagLogin.html?login=null");
+			response.sendRedirect("login.html?login=null");
 			}
 		} else {
-			response.sendRedirect("pagLogin.html");
+			 //response.sendRedirect("login.html");
+			System.out.println("nop");
 		}
 	}
 }
