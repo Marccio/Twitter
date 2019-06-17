@@ -37,7 +37,7 @@
 				        <span class="input-group-text" id="basic-addon1">@</span>
 				      </div>
 				      <input type="text" class="form-control" placeholder="Usuário" aria-label="Usuário" aria-describedby="basic-addon1">
-				     <button type="button" class="btn btn-outline-primary">Seguir</button>
+						<a class="btn btn-light" href="#" role="button">Seguir</a>
 				    </div>
 				  </form>
 					<li class="nav-item active"><a class="nav-link" href="logout.do">Sair</a></li>
