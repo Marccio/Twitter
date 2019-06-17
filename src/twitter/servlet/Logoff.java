@@ -1,4 +1,4 @@
-package br.usjt.web.projetopi.servlet;
+package twitter.servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
