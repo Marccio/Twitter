@@ -111,7 +111,10 @@ CREATE TABLE IF NOT EXISTS `bancoTwitter`.`segue` (
 ENGINE = InnoDB;
 
 INSERT INTO segue(segue, seguido) VALUES ('@guFiacador', '@vickpaula');
-INSERT INTO segue(segue, seguido) VALUES ('@marcinho', '@vickpaula');
+INSERT INTO segue(segue, seguido) VALUES ('@guFiacador', '@marcio');
+INSERT INTO segue(segue, seguido) VALUES ('@marcio', '@vickpaula');
+INSERT INTO segue(segue, seguido) VALUES ('@marcio', '@gufiacador');
+INSERT INTO segue(segue, seguido) VALUES ('@vickpaula', '@gufiacador');
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
