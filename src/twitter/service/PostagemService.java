@@ -32,4 +32,8 @@ public class PostagemService {
 	public ArrayList<Integer> listarIds(){
 		return this.postagemDao.listarIds();
 	}
+	
+	public ArrayList<Integer> listaPerfil(String nickname){
+		return this.postagemDao.listaPerfil(nickname);
+	}
 }

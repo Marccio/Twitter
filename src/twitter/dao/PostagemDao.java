@@ -148,7 +148,7 @@ public class PostagemDao {
 	
 	public ArrayList<Integer> listaPerfil(String nickname){
 		
-		String sql = "SELECT id FROM postagem WHERE nickname=?";
+		String sql = "SELECT id FROM postagem WHERE usuario_nickname=?";
 		
 		try {
 			this.conexao = ConnectionFactory.conectar();
