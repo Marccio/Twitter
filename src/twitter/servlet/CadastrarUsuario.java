@@ -55,7 +55,7 @@ public class CadastrarUsuario extends HttpServlet {
 			user.setSenha(senha);
 			
 			int idAuto = userService.cadastrar(user);
-			Usuario userTeste = userService.consultar(idAuto);
+			Usuario userTeste = userService.consultar2(idAuto);
 			
 			if(idAuto == userTeste.getId()) {
 				response.sendRedirect("login.jsp?cadastro=true");

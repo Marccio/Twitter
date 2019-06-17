@@ -42,7 +42,6 @@ public class CadastrarPostagem extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String texto = request.getParameter("texto");
-		String dataEhora = request.getParameter("dataEhora");
 		String nickname = request.getParameter("nickname");
 		
 		PostagemService post = new PostagemService();
@@ -53,12 +52,12 @@ public class CadastrarPostagem extends HttpServlet {
 		try {
 			Usuario usuario =user.consultar(nickname);
 			postagem.setTexto(texto);
-			//postagem.setDataEhora(dataEhora);
+			postagem.setDataEhora("0000-00-00 00:00:00");
 			postagem.setUsuario(usuario);
 			int id = post.cadastrar(postagem);
 			
 			if (id > -1) {
-				response.sendRedirect("feed.jsp");
+				response.sendRedirect("Feed.jsp");
 			}
 		}catch(Exception e){
 			e.printStackTrace();
