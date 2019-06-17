@@ -64,7 +64,7 @@ public class PostagemDao {
 					Usuario u = new Usuario();
 					Postagem a = new Postagem();
 					a.setTexto(rs.getString("texto"));
-					a.setDataEhora(rs.getDate("dataEhora"));
+					a.setDataEhora(rs.getString("dataEhora"));
 					a.setImagem(rs.getString("imagem"));
 					u.setNickname(rs.getString("usuario_nickname"));
 					a.setUsuario(u);
