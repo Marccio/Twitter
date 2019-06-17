@@ -27,8 +27,8 @@
 
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="nav navbar-nav ml-auto">
-					<li class="nav-item active"><a class="nav-link" href="#">Login</a></li>
-					<li class="nav-item active"><a class="nav-link" href="#">Cadastre-se</a></li>
+					<li class="nav-item active"><a class="nav-link" href="login.html">Login</a></li>
+					<li class="nav-item active"><a class="nav-link" href="register.html">Cadastre-se</a></li>
 				</ul>
 			</div>
 

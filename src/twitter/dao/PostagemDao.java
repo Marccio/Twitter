@@ -146,4 +146,28 @@ public class PostagemDao {
 		return null;
 	}
 	
+	public ArrayList<Integer> listaPerfil(String nickname){
+		
+		String sql = "SELECT id FROM postagem WHERE nickname=?";
+		
+		try {
+			this.conexao = ConnectionFactory.conectar();
+			
+			PreparedStatement ps = conexao.prepareStatement(sql);
+			ps.setString(1, nickname);
+			ps.execute();
+			
+			ResultSet rs = ps.executeQuery();
+			ArrayList<Integer> lista = new ArrayList<Integer>();
+			while(rs.next()) {
+				lista.add(rs.getInt("id"));
+			}
+			return lista;
+		} catch(SQLException ex) {
+			ex.printStackTrace();
+		}
+		
+		return null;
+	}
+	
 }
