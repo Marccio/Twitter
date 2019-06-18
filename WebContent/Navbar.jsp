@@ -88,7 +88,6 @@
 												<th scope="col">Nickname</th>
 											</tr>
 										</thead>
-										<tbody>
 											<%
 												try {
 													UsuarioService userService = new UsuarioService();
@@ -109,7 +108,6 @@
 
 												}
 											%>
-										</tbody>
 
 									</table>
 
