@@ -56,7 +56,7 @@
 						</div>
 						<input type="text" class="form-control" placeholder="Usuário"
 							aria-label="Usuário" aria-describedby="basic-addon1"> <a
-							class="btn btn-light" href="#" role="button">Seguir</a>
+							class="btn btn-light" href="seguir.do" role="button">Seguir</a>
 					</div>
 					<li class="nav-item active"><a class="nav-link"
 						href="login.jsp" onclick="<%session.invalidate();%>">Sair</a></li>
