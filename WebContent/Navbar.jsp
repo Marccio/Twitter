@@ -42,14 +42,24 @@
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="nav navbar-nav ml-auto">
 					<li class="nav-item active" Style="text-align: left;"><a
-						class="nav-link">Logado como <%=user.getNome() %> </a></li>
+						class="nav-link">Logado como <%=user.getNome()%>
+					</a></li>
 					<li class="nav-item active"><a class="nav-link" href="#"
 						data-toggle="modal" data-target="#modalSeguidores">Seguidores
 					</a></li>
 					<li class="nav-item active"><a class="nav-link" href="#"
 						data-toggle="modal" data-target="#modalPostagem">Criar Post </a></li>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<!-- Fazer uma query para buscar a pessoa e se ela existir no banco seguir ela -->
+							<span class="input-group-text" id="basic-addon1">@</span>
+						</div>
+						<input type="text" class="form-control" placeholder="Usuário"
+							aria-label="Usuário" aria-describedby="basic-addon1"> <a
+							class="btn btn-light" href="#" role="button">Seguir</a>
+					</div>
 					<li class="nav-item active"><a class="nav-link"
-						href="login.jsp" onclick="<% session.invalidate();%>">Sair</a></li>
+						href="login.jsp" onclick="<%session.invalidate();%>">Sair</a></li>
 
 				</ul>
 			</div>
@@ -127,14 +137,14 @@
 						<div class="row">
 							<div class="center" id="first">
 								<form method="POST" action="CadastrarPostagem.do">
-								<div class="form-group">
-									<label for="txtNome">Texto</label> 
-									<input type="text"
-										class="form-control" id="txtNome" name="post"
-										aria-describedby="nomeHelp" placeholder="Digite seu Post"
-										required="" autofocus="">
-								</div>
-								 <button type="submit" class="btn btn-lg mt-2 btn-primary btnCadastrar">Cadastrar</button>
+									<div class="form-group">
+										<label for="txtNome">Texto</label> <input type="text"
+											class="form-control" id="txtNome" name="post"
+											aria-describedby="nomeHelp" placeholder="Digite seu Post"
+											required="" autofocus="">
+									</div>
+									<button type="submit"
+										class="btn btn-lg mt-2 btn-primary btnCadastrar">Cadastrar</button>
 								</form>
 							</div>
 
