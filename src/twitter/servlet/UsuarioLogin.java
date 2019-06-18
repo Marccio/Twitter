@@ -50,9 +50,9 @@ public class UsuarioLogin extends HttpServlet {
 
 		//user.setEmail(email);
 		Usuario userAutentica = userService.consultarLogin(email);
-		System.out.println(userAutentica.getNickname());
+		//System.out.println(userAutentica.getNickname());
 		String login = request.getParameter("login");
-		System.out.println(login);
+		//System.out.println(login);
 		
 		if (request.getParameter("login") != null) {
 			
@@ -63,7 +63,7 @@ public class UsuarioLogin extends HttpServlet {
 					response.sendRedirect("Feed.jsp?nickname="+userAutentica.getNickname());
 				} else {
 					response.sendRedirect("login.html?senha=false");
-					System.out.println(login);
+					//System.out.println(login);
 				} 
 			} /*else {
 			response.sendRedirect("login.html?login=null");
@@ -71,7 +71,7 @@ public class UsuarioLogin extends HttpServlet {
 			}*/
 		} else {
 			 //response.sendRedirect("login.html");
-			System.out.println(login);
+			//System.out.println(login);
 		}
 	}
 }

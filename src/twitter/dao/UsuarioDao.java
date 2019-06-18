@@ -165,7 +165,7 @@ public class UsuarioDao {
 	}
 
 	public ArrayList<Usuario> listarMeusSeguidores(String nickname) {
-		String sqlSelect = "SELECT segue FROM segue WHERE seguido = ?";
+		String sqlSelect = "SELECT seguido FROM segue WHERE segue_nickname = ?";
 
 		ArrayList<Usuario> lista = new ArrayList<>();
 		try {
@@ -188,8 +188,8 @@ public class UsuarioDao {
 		return null;
 	}
 	
-	public ArrayList<Usuario> listarQuemSigo(String nickname) {
-		String sqlSelect = "SELECT nickname FROM segue WHERE segue = ?";
+	/*public ArrayList<Usuario> listarQuemSigo(String nickname) {
+		String sqlSelect = "SELECT nickname FROM seguir WHERE segue = ?";
 
 		ArrayList<Usuario> lista = new ArrayList<>();
 		try {
@@ -210,7 +210,7 @@ public class UsuarioDao {
 			e.printStackTrace();
 		}
 		return null;
-	}
+	}*/
 	
 	
 	

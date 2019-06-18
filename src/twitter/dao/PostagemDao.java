@@ -97,7 +97,7 @@ public class PostagemDao {
 
 	public ArrayList<Integer> listarPostagemSeguindo(String nickname) {
 		String sqlSelect = "SELECT id FROM postagem AS p JOIN segue AS s \r\n" + 
-				"WHERE p.usuario_nickname = s.segue AND s.seguido = ?";
+				"WHERE p.usuario_nickname = s.segue_nickname AND s.seguido = ?";
 
 		ArrayList<Integer> lista = new ArrayList<>();
 		try {

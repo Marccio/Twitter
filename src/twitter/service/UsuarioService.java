@@ -41,8 +41,8 @@ public class UsuarioService {
 		return this.usuarioDao.listarMeusSeguidores(nickname);
 	}
 	
-	public ArrayList<Usuario> listarQuemSigo(String nickname){
+	/*public ArrayList<Usuario> listarQuemSigo(String nickname){
 		return this.usuarioDao.listarQuemSigo(nickname);
-	}
+	}*/
 	
 }

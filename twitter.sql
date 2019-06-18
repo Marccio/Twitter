@@ -94,12 +94,12 @@ INSERT INTO postagem(texto, dataEhora, usuario_nickname) VALUES ('exemplo27', '2
 -- Table `bancoTwitter`.`segue`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bancoTwitter`.`segue` (
-  `segue` VARCHAR(45) NOT NULL,
+  `segue_nickname` VARCHAR(45) NOT NULL,
   `seguido` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`segue`, `seguido`),
+  PRIMARY KEY (`segue_nickname`, `seguido`),
   INDEX `fk_segue_usuario1_idx` (`seguido` ASC),
   CONSTRAINT `fk_seguidores_usuario1`
-    FOREIGN KEY (`segue`)
+    FOREIGN KEY (`segue_nickname`)
     REFERENCES `bancoTwitter`.`usuario` (`nickname`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
@@ -110,11 +110,11 @@ CREATE TABLE IF NOT EXISTS `bancoTwitter`.`segue` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO segue(segue, seguido) VALUES ('@guFiacador', '@vickpaula');
-INSERT INTO segue(segue, seguido) VALUES ('@guFiacador', '@marcio');
-INSERT INTO segue(segue, seguido) VALUES ('@marcio', '@vickpaula');
-INSERT INTO segue(segue, seguido) VALUES ('@marcio', '@gufiacador');
-INSERT INTO segue(segue, seguido) VALUES ('@vickpaula', '@gufiacador');
+INSERT INTO segue(segue_nickname, seguido) VALUES ('@guFiacador', '@vickpaula');
+INSERT INTO segue(segue_nickname, seguido) VALUES ('@guFiacador', '@marcio');
+INSERT INTO segue(segue_nickname, seguido) VALUES ('@marcio', '@vickpaula');
+INSERT INTO segue(segue_nickname, seguido) VALUES ('@marcio', '@gufiacador');
+INSERT INTO segue(segue_nickname, seguido) VALUES ('@vickpaula', '@gufiacador');
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

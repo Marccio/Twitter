@@ -98,8 +98,8 @@
 											%>
 
 											<tr>
-												<th scope="row"><%=user.getId()%></th>
-												<td><%=user.getNickname()%></td>
+												<th scope="row"><%=usuario.getId()%></th>
+												<td><%=usuario.getNickname()%></td>
 
 											</tr>
 											<%
