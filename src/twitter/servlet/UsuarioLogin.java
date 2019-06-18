@@ -50,7 +50,7 @@ public class UsuarioLogin extends HttpServlet {
 
 		//user.setEmail(email);
 		Usuario userAutentica = userService.consultarLogin(email);
-		
+		System.out.println(userAutentica.getNickname());
 		String login = request.getParameter("login");
 		System.out.println(login);
 		

@@ -37,6 +37,7 @@
 			</button>
 			<%
 				Usuario user = (Usuario) session.getAttribute("usuario");
+				//String nick=user.getNickname();
 				if (user != null) {
 			%>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
@@ -136,10 +137,10 @@
 					<div class="container-center">
 						<div class="row">
 							<div class="center" id="first">
-								<form method="POST" action="CadastrarPostagem.do">
+								<form method="POST" action="CadastrarPostagem.do?nickname=<%=request.getParameter("nickname")%>">
 									<div class="form-group">
 										<label for="txtNome">Texto</label> <input type="text"
-											class="form-control" id="txtNome" name="post"
+											class="form-control" id="txtNome" name="texto"
 											aria-describedby="nomeHelp" placeholder="Digite seu Post"
 											required="" autofocus="">
 									</div>

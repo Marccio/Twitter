@@ -49,14 +49,17 @@ public class CadastrarPostagem extends HttpServlet {
 		UsuarioService user = new UsuarioService();
 		
 		try {
-			Usuario usuario = user.consultar(nickname);
+			Usuario usuario = new Usuario();
 			postagem.setTexto(texto);
 			postagem.setDataEhora("0000-00-00 00:00:00");
+			usuario.setNickname(nickname);
 			postagem.setUsuario(usuario);
 			int id = post.cadastrar(postagem);
 			
+			System.out.println(id);
+			
 			if (id > -1) {
-				response.sendRedirect("Feed.jsp");
+				response.sendRedirect("Feed.jsp?nickname="+nickname);
 			}
 		}catch(Exception e){
 			e.printStackTrace();

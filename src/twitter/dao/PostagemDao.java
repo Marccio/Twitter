@@ -23,11 +23,11 @@ public class PostagemDao {
 	}
 
 	public int cadastrar(Postagem postagem) {
-		String sql = "INSERT INTO postagem(texto, dataEhora, imagem, nickname) VALUES (?, ?, ?, ?) ";
+		String sql = "INSERT INTO postagem(texto, dataEhora, imagem, usuario_nickname) VALUES (?, ?, ?, ?) ";
 
 		try (PreparedStatement ps = this.conexao.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)) {
 			ps.setString(1, postagem.getTexto());
-			//ps.setDate(2, postagem.getDataEhora());
+			ps.setString(2, postagem.getDataEhora());
 			ps.setString(3, postagem.getImagem());
 			ps.setString(4, postagem.getUsuario().getNickname());
 
