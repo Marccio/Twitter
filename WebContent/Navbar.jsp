@@ -36,7 +36,6 @@
 			</button>
 			<%
 				Usuario user = (Usuario) session.getAttribute("usuario");
-				//System.out.print(user.getEmail());
 				if (user != null) {
 			%>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
