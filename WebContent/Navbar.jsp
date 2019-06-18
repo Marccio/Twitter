@@ -37,7 +37,6 @@
 			</button>
 			<%
 				Usuario user = (Usuario) session.getAttribute("usuario");
-				//String nick=user.getNickname();
 				if (user != null) {
 			%>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
@@ -99,8 +98,8 @@
 											%>
 
 											<tr>
-												<th scope="row"><%=usuario.getId()%></th>
-												<td><%=usuario.getNickname()%></td>
+												<th scope="row"><%=user.getId()%></th>
+												<td><%=user.getNickname()%></td>
 
 											</tr>
 											<%
