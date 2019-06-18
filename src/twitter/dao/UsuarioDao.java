@@ -165,7 +165,7 @@ public class UsuarioDao {
 	}
 
 	public ArrayList<Usuario> listarMeusSeguidores(String nickname) {
-		String sqlSelect = "SELECT nickname FROM segue WHERE seguido = ?";
+		String sqlSelect = "SELECT segue FROM segue WHERE seguido = ?";
 
 		ArrayList<Usuario> lista = new ArrayList<>();
 		try {

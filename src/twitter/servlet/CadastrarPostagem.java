@@ -49,7 +49,7 @@ public class CadastrarPostagem extends HttpServlet {
 		UsuarioService user = new UsuarioService();
 		
 		try {
-			Usuario usuario =user.consultar(nickname);
+			Usuario usuario = user.consultar(nickname);
 			postagem.setTexto(texto);
 			postagem.setDataEhora("0000-00-00 00:00:00");
 			postagem.setUsuario(usuario);

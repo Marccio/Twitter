@@ -3,6 +3,7 @@
 <%@ page import="twitter.model.Usuario"%>
 <%@ page import="twitter.service.UsuarioService"%>
 <%@ page import="java.util.ArrayList"%>
+<%@ page import="java.util.Enumeration"%>
 
 <head>
 <meta charset="ISO-8859-1">
@@ -40,15 +41,15 @@
 			%>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="nav navbar-nav ml-auto">
-					<li class="nav-item active" Style="text-aliggn: left;"><a
-						class="nav-link">Logado como ${user.nome} </a></li>
+					<li class="nav-item active" Style="text-align: left;"><a
+						class="nav-link">Logado como <%=user.getNome() %> </a></li>
 					<li class="nav-item active"><a class="nav-link" href="#"
 						data-toggle="modal" data-target="#modalSeguidores">Seguidores
 					</a></li>
 					<li class="nav-item active"><a class="nav-link" href="#"
 						data-toggle="modal" data-target="#modalPostagem">Criar Post </a></li>
 					<li class="nav-item active"><a class="nav-link"
-						href="login.jsp">Sair</a></li>
+						href="login.jsp" onclick="<% session.invalidate();%>">Sair</a></li>
 
 				</ul>
 			</div>
@@ -74,7 +75,7 @@
 									<table class="table">
 										<thead>
 											<tr>
-												<th scope="col">Nick</th>
+												<th scope="col">Nickname</th>
 											</tr>
 										</thead>
 										<tbody>

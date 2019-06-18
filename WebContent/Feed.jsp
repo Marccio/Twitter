@@ -8,14 +8,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
-	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-	<meta charset="ISO-8859-1">
 <title>Twistter</title>
 </head>
 <body>
-	<%
+	<%		
 		PostagemService pService = new PostagemService();
 		ArrayList<Integer> lista = pService.listarPostagemSeguindo(request.getParameter("nickname"));
 		for(int i=1; i<lista.size();i++){
